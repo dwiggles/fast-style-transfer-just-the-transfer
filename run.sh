@@ -18,7 +18,12 @@ mkdir data/bin
 
 #run style transfer on video
 python transform_video.py --in-path examples/content/fox.mp4 \
-  --checkpoint ./scream.ckpt \
+  --checkpoint ./wave.ckpt \
   --out-path /artifacts/out.mp4 \
   --device /gpu:0 \
   --batch-size 4 2>&1
+
+#run style transfer on a single image
+#python evaluate.py --checkpoint ./scream.ckpt \
+#  --in-path examples/WhatsApp\ Image\ 2018-05-10\ at\ 3.34.49\ PM.jpeg \
+#  --out-path /artifacts/new.jpg
