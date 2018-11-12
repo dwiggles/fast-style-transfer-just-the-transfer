@@ -16,6 +16,11 @@ apt-install || exit 1
 mkdir data
 mkdir data/bin
 
+# get the style file -- in this case, wave.ckpt 
+wget http://kewbeach.ca/fast-style-transfer/wave.ckpt
+
+#run style transfer on video
+
 #run style transfer on video
 python transform_video.py --in-path examples/content/fox.mp4 \
   --checkpoint ./wave.ckpt \
