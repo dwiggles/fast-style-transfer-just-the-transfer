@@ -1,6 +1,6 @@
 #!/bin/bash
 
-APT_PACKAGES="apt-utils ffmpeg libav-tools x264 x265"
+APT_PACKAGES="apt-utils ffmpeg libav-tools x264 x265 wget"
 apt-install() {
 	export DEBIAN_FRONTEND=noninteractive
 	apt-get update -q
@@ -17,7 +17,7 @@ mkdir data
 mkdir data/bin
 
 # get the style file -- in this case, wave.ckpt 
-wget http://kewbeach.ca/fast-style-transfer/wave.ckpt
+/usr/bin/wget http://kewbeach.ca/fast-style-transfer/wave.ckpt
 
 #run style transfer on video
 
